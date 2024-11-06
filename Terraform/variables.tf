@@ -55,3 +55,27 @@ variable "nic_name" {
   type    = string
   default = "terraform-nic"
 }
+
+variable "nsg_name" {
+  type    = string
+  default = "terraform-nsg"
+}
+
+variable "virtual_machine_name" {
+  type    = string
+  default = "terraform-vm"
+}
+
+variable "virtual_machine_size" {
+  type    = string
+  default = "Standard_D2s_V3"
+}
+
+variable "adminUser" {
+  type    = string
+  default = "azureuser"
+}
+
+variable "adminPassword" {
+  type = string
+}
