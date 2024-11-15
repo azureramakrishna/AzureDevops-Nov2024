@@ -1,0 +1,61 @@
+Agile process:
+-------------
+
+Backlogs
+
+Sprint Model --> 2 weeks (Nov11 - Nov22)
+
+Sprint Planning  (Nov 11)
+    - Capacity planning 
+    - Backlog items
+        task1
+        task2
+        task3 
+
+Daily standup calls ( 15 to 30min)
+
+Retrospective: Nov 22
+    - What went well           
+    - What didnt went well      
+    - What can be improved 
+
+Agile flow:
+----------
+
+Epics
+    Feature
+        Userstory
+            Taks
+                issues
+
+
+Amazon.in 
+
+Epic        design a e-commerce website 
+Features    Signup page 
+            login page
+            home page
+            Product catalog 
+            shipping cart 
+            Payment gateway
+            tracking 
+            support
+
+Userstories Signup page with google account 
+            Signup page with apple account 
+            Signup with email and password 
+
+            Login with google account 
+            Login with apple account 
+            Login with email and password 
+
+            product home page 
+
+
+Version Contorl system (VCS):
+----------------------------
+
+- Git 
+- GitHub
+
+
