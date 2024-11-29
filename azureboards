@@ -55,7 +55,114 @@ Userstories Signup page with google account
 Version Contorl system (VCS):
 ----------------------------
 
-- Git 
+- Git       
 - GitHub
 
 
+git clone <cloing url>
+git add .
+git commit -m "commit message"
+git push origin main
+
+git fetch   --> fetch the information --> git fetch origin develop
+git pull    --> download and merge    --> git pull origin develop
+
+
+Terraform templates -- Azure pipelines 
+Java, .NET          -- Azure pipelines
+
+
+Azure pipelines:
+---------------
+
+Pre-requisites:
+--------------
+- Service Connection:
+   
+    Service Principal (App registration)
+        clientid: fa7105ed-1eae-478d-8433-b433e3862455
+        secret: Umg8Q~gEyYSe3RHSHEy6syOWRPlmmzVpV6sbMc8L
+        tenantid: 459865f1-a8aa-450a-baec-8b47a9e5c904
+        subscription: 2e28c82c-17d7-4303-b27a-4141b3d4088f
+
+- Agent Pool:
+  ----------
+   - Microsoft-hosted agents
+    Submit the form: https://aka.ms/azpipelines-parallelism-request 
+
+
+   - Self-hosted agents:
+    PAT: 4NeGMUvMmEdNl2fD9gp4xuv5Mnh3P5Bm210eq8Ry0UBmlQ5wA9S3JQQJ99AKACAAAAAAAAAAAAASAZDOYjWi
+
+    1  mkdir myagent && cd myagent
+    2  wget https://vstsagentpackage.azureedge.net/agent/4.246.1/vsts-agent-linux-x64-4.246.1.tar.gz
+    3  ls
+    4  tar zxvf vsts-agent-linux-x64-4.246.1.tar.gz
+    5  ls
+    6  ls -ltr
+    7  rm -rf vsts-agent-linux-x64-4.246.1.tar.gz
+    8  ls
+    9  ./config.sh
+   10  ls
+   11  ./run.sh
+   12  ls
+   13  sudo ./svc.sh install
+   14  sudo ./svc.sh start
+
+
+
+Azure Pipelines:
+---------------
+- Classic editor (Manual pipeline)
+- YAML pipeline (Automated pipeline) pipeline as a code
+
+
+CI - Continuous integration
+CD - Continuous deployment  (trigger - automatically deploy the artifacts)
+
+CD - Continuous delivery (manual way of publishing the artifact)
+
+
+Deploying a Java-based Tomcat application to Azure:
+--------------------------------------------------
+
+az group create --name MyResourceGroup --location westus
+
+az appservice plan create --resource-group MyResourceGroup --name MyPlan --sku S1
+
+az webapp create --resource-group MyResourceGroup --plan MyPlan --name saanvikitapp
+
+az mysql flexible-server create --resource-group MyResourceGroup --name saanvikitdbserver --admin-user mysqldbuser --admin-password P2ssw0rd@123 --sku-name Standard_B1ms --tier Burstable --storage-size 32 
+
+
+String url="jdbc:mysql://saanvikitdbserver.mysql.database.azure.com:3306/saanvikitdbserver?useSSL=true";myDbConn=DriverManager.getConnection(url, "mysqldbuser", "P2ssw0rd@123");
+
+hostname:
+saanvikitdbserver.mysql.database.azure.com
+
+
+Docker:
+------
+
+Packing the application code and its depencies and running as a container 
+
+Application code and dependencies --> Image --> Container
+
+Docker installation
+- Windows 
+- Linux (Ubuntu 24.04)
+
+    sudo usermod -aG docker azureuser
+
+
+docker pull ubuntu:24.04 
+docker run ubuntu:24.04
+docker run --name myubuntu -itd ubuntu:24.04
+docker ps
+docker ps -a 
+docker attach containerid/containername
+ctrl + p + q  (for safe exist from the container)
+docker start contanerid
+docker stop containerid 
+docker images 
+docker images rm imagename:tag
