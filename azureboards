@@ -81,7 +81,6 @@ Pre-requisites:
    
     Service Principal (App registration)
         clientid: fa7105ed-1eae-478d-8433-b433e3862455
-        secret: Umg8Q~gEyYSe3RHSHEy6syOWRPlmmzVpV6sbMc8L
         tenantid: 459865f1-a8aa-450a-baec-8b47a9e5c904
         subscription: 2e28c82c-17d7-4303-b27a-4141b3d4088f
 
