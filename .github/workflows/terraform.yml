@@ -48,7 +48,7 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -out=tfplan
-        working-directory: ./terraform/VirtualMachine
+        working-directory: ./Terraform/VirtualMachine
         env:
           TF_VAR_adminpassword: ${{ secrets.TF_VAR_ADMINPASSWORD }}
 
@@ -56,6 +56,6 @@ jobs:
       - name: Terraform Apply
         if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve tfplan
-        working-directory: ./terraform/VirtualMachine
+        working-directory: ./Terraform/VirtualMachine
         env:
           TF_VAR_adminpassword: ${{ secrets.TF_VAR_ADMINPASSWORD }}
