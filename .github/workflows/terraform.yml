@@ -13,17 +13,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Azure CLI
-        uses: azure/setup-azure-cli@v1
-        with:
-          azcliversion: '2.33.0'
-
       - name: Login to Azure
         uses: azure/login@v1
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+
+      - name: Set up Azure CLI
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest # or specify a version like 2.64.0
 
       - name: Initialize Terraform
         run: |
